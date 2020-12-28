@@ -1,13 +1,19 @@
-# Very short description of the package
+# Add reviews to the Park Right Platform
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/parkright/reviews.svg?style=flat-square)](https://packagist.org/packages/parkright/reviews)
-[![Build Status](https://img.shields.io/travis/parkright/reviews/master.svg?style=flat-square)](https://travis-ci.org/parkright/reviews)
-[![Quality Score](https://img.shields.io/scrutinizer/g/parkright/reviews.svg?style=flat-square)](https://scrutinizer-ci.com/g/parkright/reviews)
-[![Total Downloads](https://img.shields.io/packagist/dt/parkright/reviews.svg?style=flat-square)](https://packagist.org/packages/parkright/reviews)
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+This packages adds functionality to the Park Right booking engine to allow Products to be reviewed.
 
 ## Installation
+
+This is a private repository so you need to add this to your composer.json:
+
+```git
+repositories: [
+  {
+    "type": "vcs",
+    "url": "https://github.com/parkright/reviews"
+   }
+]
+```
 
 You can install the package via composer:
 
@@ -16,6 +22,18 @@ composer require parkright/reviews
 ```
 
 ## Usage
+
+This package can actually be used to add the review logic to any model by adding the trait:
+
+``` php
+use Reviewable;
+```
+
+You can then add a review like so:
+
+``` php
+$model->addReview()
+```
 
 ``` php
 // Usage description here
