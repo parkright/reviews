@@ -21,6 +21,18 @@ You can install the package via composer:
 composer require parkright/reviews
 ```
 
+You must publish the migrations:
+
+```bash
+php artisan vendor:publish --provider="Parkright\Reviews\ReviewServiceProvider" --tag="review-migrations"
+```
+
+Optionally publish the configuration file:
+
+```bash
+php artisan vendor:publish --provder="Parkright\Reviews\ReviewServiceProvider" --tag="review-config"
+```
+
 ## Usage
 
 This package can actually be used to add the review logic to any model by adding the trait:
