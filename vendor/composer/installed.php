@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'No version set (parsed as 1.0.0)',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'd37831c21c9cc396a2c4085543147963ac83483d',
     'name' => 'parkright/reviews',
   ),
   'versions' => 
@@ -442,12 +442,12 @@
     ),
     'parkright/reviews' => 
     array (
-      'pretty_version' => 'No version set (parsed as 1.0.0)',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'd37831c21c9cc396a2c4085543147963ac83483d',
     ),
     'phar-io/manifest' => 
     array (

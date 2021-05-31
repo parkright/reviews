@@ -20,6 +20,18 @@ class CreateReviewAction
     {
         $this->validate($review->toArray());
 
+        if (! $review->author) {
+            $review->author = 'Anonymous';
+        }
+
+        if (! $review->title) {
+            $review->title = 'Review by ' . $review->author;
+        }
+
+        if (! $review->ip_address) {
+            $review->ip_address = request()->ip();
+        }
+
         $model->reviews()->save($review);
 
         return $model->refresh();

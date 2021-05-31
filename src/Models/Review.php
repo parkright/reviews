@@ -13,6 +13,8 @@ class Review extends Model
 
     protected $guarded = [];
 
+    protected $casts = ['published' => 'boolean'];
+
     public function model()
     {
         return $this->morphTo();
@@ -26,6 +28,16 @@ class Review extends Model
     protected static function newFactory()
     {
         return \Parkright\Reviews\Database\Factories\ReviewFactory::new();
+    }
+
+    public function publish()
+    {
+        $this->update(['published' => true]);
+    }
+
+    public function isPublished()
+    {
+        return !!$this->published;
     }
 
 
